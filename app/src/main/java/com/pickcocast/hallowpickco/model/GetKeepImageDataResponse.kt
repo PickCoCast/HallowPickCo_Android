@@ -1,4 +1,4 @@
-package com.pickcocast.model
+package com.pickcocast.hallowpickco.model
 
 class GetKeepImageDataResponse (
     var keep_img_idx: Int,

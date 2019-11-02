@@ -1,6 +1,6 @@
 package com.pickcocast.hallowpickco.util
 
-import com.pickcocast.model.GetKeepImageDataResponse
+import com.pickcocast.hallowpickco.model.GetKeepImageDataResponse
 import retrofit2.Call
 import retrofit2.http.GET
 
