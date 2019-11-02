@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.pickcocast.hallowpickco.R
 import com.pickcocast.hallowpickco.ui.keep.adapter.KeepImageRVAdapter
-import com.pickcocast.hallowpickco.ui.keep.data.KeepImageData
+import com.pickcocast.model.GetKeepImageDataResponse
 import kotlinx.android.synthetic.main.activity_keep.*
 
 class KeepActivity : AppCompatActivity() {
@@ -20,12 +20,37 @@ class KeepActivity : AppCompatActivity() {
     }
 
     private fun getKeepImageRequest() {
-        var tmp = ArrayList<KeepImageData>()
-        tmp.add(KeepImageData(0, "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"))
-        tmp.add(KeepImageData(0, "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"))
-        tmp.add(KeepImageData(0, "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"))
-        tmp.add(KeepImageData(0, "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"))
-        tmp.add(KeepImageData(0, "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"))
+        var tmp = ArrayList<GetKeepImageDataResponse>()
+        tmp.add(
+            GetKeepImageDataResponse(
+                0,
+                "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"
+            )
+        )
+        tmp.add(
+            GetKeepImageDataResponse(
+                0,
+                "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"
+            )
+        )
+        tmp.add(
+            GetKeepImageDataResponse(
+                0,
+                "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"
+            )
+        )
+        tmp.add(
+            GetKeepImageDataResponse(
+                0,
+                "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"
+            )
+        )
+        tmp.add(
+            GetKeepImageDataResponse(
+                0,
+                "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png"
+            )
+        )
 
         var keepRVAdapter = KeepImageRVAdapter(this@KeepActivity!!, tmp)
         rv_keep_image_list.apply {

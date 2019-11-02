@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_main_male.setOnClickListener{
 //            Log.d("현주", "눌려졌당")
-            //goKeepActivity()
+            goKeepActivity()
         }
     }
 
