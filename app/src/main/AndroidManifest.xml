@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.LoadingActivity"></activity>
+        <activity android:name=".ui.InformationActivity" />
+        <activity android:name=".ui.RandomImageActivity" />
         <activity android:name=".ui.keep.KeepActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
