@@ -10,7 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.pickcocast.hallowpickco.R
-import com.pickcocast.model.GetKeepImageDataResponse
+import com.pickcocast.hallowpickco.model.GetKeepImageDataResponse
+
+
 
 class KeepImageRVAdapter(private val ctx: Context, var dataList: List<GetKeepImageDataResponse>) :
     RecyclerView.Adapter<KeepImageRVAdapter.KeepImageViewHolder>() {
@@ -25,11 +27,16 @@ class KeepImageRVAdapter(private val ctx: Context, var dataList: List<GetKeepIma
     override fun onBindViewHolder(holder: KeepImageViewHolder, position: Int) {
         Glide.with(ctx)
             .load(dataList[position].keep_img)
-            .transforms(CenterCrop(), RoundedCorners(38))
+            .transforms(CenterCrop(), RoundedCorners(dp2px(ctx, 38)))
             .into(holder.imgKeepImage)
     }
 
     inner class KeepImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgKeepImage: ImageView = itemView.findViewById(R.id.iv_rv_item_keep_image)
+    }
+
+    fun dp2px(context: Context, dp: Int): Int {
+        val scale = context.resources.displayMetrics.density
+        return (dp * scale + 0.5f).toInt()
     }
 }

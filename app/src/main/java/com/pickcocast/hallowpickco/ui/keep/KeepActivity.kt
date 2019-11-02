@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.pickcocast.hallowpickco.R
 import com.pickcocast.hallowpickco.ui.keep.adapter.KeepImageRVAdapter
-import com.pickcocast.model.GetKeepImageDataResponse
+import com.pickcocast.hallowpickco.model.GetKeepImageDataResponse
 import kotlinx.android.synthetic.main.activity_keep.*
 
 class KeepActivity : AppCompatActivity() {
