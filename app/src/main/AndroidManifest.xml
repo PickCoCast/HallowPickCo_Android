@@ -14,6 +14,7 @@
         <activity android:name=".ui.LoadingActivity"></activity>
         <activity android:name=".ui.InformationActivity" />
         <activity android:name=".ui.RandomImageActivity" />
+        <activity android:name=".ui.keep.KeepActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
