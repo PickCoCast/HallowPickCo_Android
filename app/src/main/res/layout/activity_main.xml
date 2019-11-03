@@ -8,21 +8,20 @@
     tools:context=".ui.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="-20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_left_tree" />
-
-    <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="395dp"
+        android:layout_height="289dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/img_right_ghost" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="398dp"
+        android:layout_height="530dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_left_tree" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -37,7 +36,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btn_main_female"
-            android:layout_width="125dp"
+            android:layout_width="160dp"
             android:layout_height="205dp"
             android:layout_marginStart="38dp"
             android:layout_marginLeft="38dp"
@@ -51,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/thejunggt140"
                 android:text="여자"
                 android:textColor="@color/colorBlack"
                 android:textSize="17sp"
@@ -67,12 +67,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/img_girl" />
+                android:src="@drawable/img_girl" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btn_main_etc"
-            android:layout_width="125dp"
+            android:layout_width="160dp"
             android:layout_height="205dp"
             android:layout_marginTop="27dp"
             android:background="@drawable/border_round_rect_main"
@@ -85,6 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/thejunggt140"
                 android:text="기타"
                 android:textColor="@color/colorBlack"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,13 +100,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/img_etc" />
+                app:srcCompat="@drawable/img_etc" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btn_main_food"
-            android:layout_width="125dp"
+            android:layout_width="160dp"
             android:layout_height="205dp"
             android:layout_marginTop="27dp"
             android:background="@drawable/border_round_rect_main"
@@ -119,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/thejunggt140"
                 android:text="음식"
                 android:textColor="@color/colorBlack"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -133,13 +135,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/img_food" />
+                android:src="@drawable/img_food" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btn_main_male"
-            android:layout_width="125dp"
+            android:layout_width="160dp"
             android:layout_height="205dp"
             android:background="@drawable/border_round_rect_main"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,6 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/thejunggt140"
                 android:text="남자"
                 android:textColor="@color/colorBlack"
                 android:textColorLink="@color/colorBlack"
@@ -167,7 +170,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/img_man" />
+                android:src="@drawable/img_man" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,6 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
+        android:fontFamily="@font/thejunggt150"
         android:text="카테고리를 선택해주세요"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -190,6 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/thejunggt130"
         android:text="* 해당 카테고리의 캐릭터가 랜덤으로 선정됩니다."
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

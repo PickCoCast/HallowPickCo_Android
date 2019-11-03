@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApplicationController {
-    private val baseURL = "http://0.0.0.0:0/"
+    private val baseURL = "http://ec2-3-133-8-198.us-east-2.compute.amazonaws.com:3000/"
     lateinit var networkService:NetworkService
 
     init {

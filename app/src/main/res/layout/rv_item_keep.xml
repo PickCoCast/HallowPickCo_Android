@@ -21,6 +21,8 @@
             android:id="@+id/iv_rv_item_keep_image"
             android:layout_width="149dp"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
