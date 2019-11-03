@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+      
         btn_main_male.setOnClickListener{
 //            Log.d("현주", "눌려졌당")
             goRandomImageActivity("man")

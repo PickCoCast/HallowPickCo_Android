@@ -1,13 +1,13 @@
 package com.pickcocast.hallowpickco.api
 
-import com.pickcocast.hallowpickco.data.RandomData
+import com.pickcocast.hallowpickco.data.RandomDataResponse
 import retrofit2.Call
-import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ImageService {
-    @GET("/users/{login}")// 수정 필요
+    @POST("/category/{cate}")// 수정 필요
     fun getImageData(
-        @Path("login") login : String
-    ) : Call<List<RandomData>>
+        @Path("cate") cate : String
+    ) : Call<RandomDataResponse>
 }

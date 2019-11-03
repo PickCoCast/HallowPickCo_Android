@@ -20,8 +20,7 @@ import retrofit2.Response
 class RandomImageActivity : AppCompatActivity() {
     var isLove = false
     private val serverRandomImageData: ServerRandomImageData = ServerRandomImageData()
-    private var login: String = ""
-    var loadedData : MutableList<RandomData> = mutableListOf()
+    lateinit var loadedData : RandomData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,16 +47,17 @@ class RandomImageActivity : AppCompatActivity() {
         }
         //정보 보기
         btn_randomimage_showinfo.setOnClickListener {
-            if(!loadedData.isEmpty()){
+            if(!loadedData.name.equals("")){
                 val intent = Intent(this@RandomImageActivity,InformationActivity::class.java)
-                intent.putExtra("name",loadedData.get(0).name)
-                intent.putExtra("img",loadedData.get(0).img)
-                intent.putExtra("category",loadedData.get(0).category)
-                intent.putExtra("overview",loadedData.get(0).overview)
-                intent.putExtra("rating",loadedData.get(0).rating)
-                intent.putExtra("like",loadedData.get(0).like)
-                intent.putExtra("buy_url",loadedData.get(0).buy_url)
+                intent.putExtra("name",loadedData.name)
+                intent.putExtra("img",loadedData.img)
+                intent.putExtra("category",loadedData.category)
+                intent.putExtra("overview",loadedData.overview)
+                intent.putExtra("rating",loadedData.rating)
+                intent.putExtra("like",loadedData.like)
+                intent.putExtra("buy_url",loadedData.buy_url)
                 startActivity(intent)
+                finish()
             }else{
                 sendToast("불러온 데이터 없음")
             }
@@ -74,16 +74,20 @@ class RandomImageActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
                 200 -> {
-                    val name = data!!.getStringExtra("name").toString()
-                    val img = data!!.getStringExtra("img").toString()
-                    val category = data!!.getStringExtra("category").toString()
-                    val overview = data!!.getStringExtra("overview").toString()
-                    val rating = data!!.getStringExtra("rating").toString()
-                    val like = data!!.getStringExtra("like").toString()
-                    val buy_url = data!!.getStringExtra("buy_url").toString()
+                    val name = data!!.getStringExtra("name")
+                    val img = data.getStringExtra("img")
+                    val category = data.getStringExtra("category")
+                    val overview = data.getStringExtra("overview")
+                    val rating = data.getStringExtra("rating")
+                    val like = data.getIntExtra("like",0)
+                    val buy_url = data.getStringExtra("buy_url")
 
-                    val randomData = RandomData(name,img,category,overview,rating,like,buy_url)
-                    loadedData.add(0,randomData)
+                    loadedData = RandomData(0,name,img,category,overview,rating,like,buy_url,0)
+
+                    Glide.with(this).load(img).into(img_randomimage)
+                    tv_randomimage_name.text = name
+                    tv_randomimage_rating.text = rating
+
 
                     tv_randomimage_title.text = "이런건 어때요?"
 
